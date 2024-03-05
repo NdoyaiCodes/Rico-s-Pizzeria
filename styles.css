@@ -1,0 +1,158 @@
+/* Navigation bar styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent !important;
+    font-size: larger;
+}
+
+.logo {
+    width: auto;
+    height: 13rem; /* Adjust height as needed */
+    margin-top: -5rem;
+}
+
+.menu-button {
+    color: white !important; /* Add !important to override inline styles */
+    cursor: pointer;
+    outline: none;
+    margin-top: -3rem;
+}
+
+.menu-button:hover {
+    color: white !important;
+}
+
+.menu-icon {
+    width: 2rem; /* Adjust size as needed */
+    height: 2rem; /* Adjust size as needed */
+}
+
+.menu {
+    display: none; /* Initially hidden */
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: black; /* Add background color */
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu.open-menu {
+    display: block;
+    transform: translateY(0);
+}
+
+.menu-link {
+    margin-bottom: 1rem;
+    color: white !important; /* Add !important to override inline styles */
+    text-decoration: none;
+}
+
+.menu-link:hover {
+    color: #ff0000 !important;
+}
+
+/* Hero section styles */
+.hero-section {
+    background-image: url('Images/lorenzo-rui-jNbVnBSRYP4-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: shadows-into-light-regular;
+    position: relative;
+    overflow: hidden;
+}
+
+/* CSS for Word Animation */
+@keyframes word {
+    0% {
+        transform: translateY(100%);
+    }
+    15% {
+        transform: translateY(-10%);
+        animation-timing-function: ease-out;
+    }
+    20% {
+        transform: translateY(0);
+    }
+    40%,
+    100% {
+        transform: translateY(-110%);
+    }
+}
+
+.animate-word {
+    animation: word 7s infinite;
+    color: red;
+}
+
+.animate-word-delay-1 {
+    animation: word 7s infinite;
+    animation-delay: -1.4s;
+    color: red;
+}
+
+.animate-word-delay-2 {
+    animation: word 7s infinite;
+    animation-delay: -2.8s;
+    color: red;
+}
+
+.animate-word-delay-3 {
+    animation: word 7s infinite;
+    animation-delay: -4.2s;
+    color: red;
+}
+
+.animate-word-delay-4 {
+    animation: word 7s infinite;
+    animation-delay: -5.6s;
+    color: red;
+}
+
+/* Menu section animation */
+#menu-section .fade-in {
+  opacity: 0; /* Setting initial opacity */
+}
+
+#menu-section .fade-in.animate {
+  animation: fadeInFromRight 2s ease-in-out forwards; /* Apply animation */
+}
+
+@keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50%); /* Start the animation off-screen to the right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End the animation at its original position */
+  }
+}
+
+/* About section animation */
+#about-section .fade-in {
+  opacity: 0; /* Setting initial opacity */
+  transform: translateX(-50%); /* Start the element off-screen to the left */
+}
+
+#about-section .fade-in.animate {
+  animation: fadeInFromLeft 2s ease-in-out forwards; /* Apply animation */
+}
+
+@keyframes fadeInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50%); /* Start the animation off-screen to the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End the animation at its original position */
+  }
+}
